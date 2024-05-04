@@ -1,0 +1,263 @@
+:root{
+  --main-color:rgb(43 43 43);
+}
+
+*{
+  box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  background-color:rgb(48, 48, 48);
+  padding-top:50px;
+  padding-left:8vw;
+  color:white;
+}
+
+header{
+  width:100%;
+  height:50px;
+  background-color: var(--main-color);
+  box-shadow:0px 2px 5px #000000;
+  position:fixed;
+  top:0px;
+  right:0px;
+  left:0px;
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+.logo{
+  margin-left:3vw;
+  text-transform:uppercase;
+  font-weight:700;
+}
+
+.guy{
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  background-color:#828282;
+  display:flex;
+  justify-content: center ;
+  align-items:center;
+}
+
+.guy div{
+  width:15px;
+  height:15px;
+  border-radius:50%;
+  background-color:#c2c2c2;
+  box-shadow: 0px 0px 3px #1a1a1a;
+}
+
+.links{
+  width:8px;
+  height:8px;
+  background-color:transparent;
+  border-radius:4px;
+  border:8px solid transparent;
+  border-top-color:#8f8f8f;
+  margin-top:10px;
+}
+
+
+.not-icon{
+  margin-right:3vw;
+  position:relative;
+}
+
+.not-icon div{
+  content:"";
+  width:10px;
+  height:10px;
+  background-color:#cf00cf;
+  box-shadow:0px 0px 6px #d15ad1;
+  border-radius:50%;
+  position:absolute;
+  top:0px;
+  right:1px;
+  z-index:10;
+}
+
+.notification{
+  color:white;
+} 
+
+.guy,
+.name,
+.links{
+  margin-left:5px;
+  margin-right:5px;
+}
+
+
+.left-side{
+  margin-right:3vw;
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+
+}
+
+aside{
+  height:100%;
+  width:8vw;
+  background-color: var(--main-color);
+  box-shadow: 1px 0px 2px #000;
+  position:fixed;
+  top:50.5px;
+  left:0px;
+  
+}
+
+aside .icons{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  align-items: center;
+
+}
+
+aside .icons div{
+  height:auto;
+  width:100%;
+  padding: 25px ;
+  display:flex;
+  justify-content:center;
+  transition: background-color 1s ,opacity 1s;
+  position:relative;
+}
+
+.icons div::after{
+  content:" ";
+  height:100%;
+  width:5px;
+  background-image:linear-gradient(to top,#e632e6,#39e3e3);
+  position:absolute;
+  top:0px;
+  bottom:0px;
+  right:0px;
+  transition: all 1s;
+  display:none;
+}
+
+.icons div:active::after{
+  display:block;
+}
+.icons div:active{
+  background-color: #5b9da3;
+  opacity:0.4;
+}
+
+/*###########################################################*/
+
+section{
+  margin-top:5vw;
+  margin-left:5vw;
+}
+
+.title{
+  font-size: 30px;
+  text-transform: capitalize;
+  
+}
+
+.description {
+  width:50vw;
+  margin-top:10px;
+}
+/*#######№#################№##################################*/
+
+.section-middle{
+  display:grid;
+  grid-template-columns:repeat(2,2fr) 1fr;
+  margin:20px 40px 50px 0px;
+  gap:1vw;
+
+.right-middle-section,
+.middle-middle-section{
+  display:grid;
+  grid-template-columns:1fr;
+}
+
+.right-middle-section>p,
+.middle-middle-section>p{
+  text-transform:uppercase;
+  width:100%;
+  height:40px;
+  background-color: rgb(69, 69, 69);
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  border-top-right-radius:10px;
+  border-top-left-radius: 10px;
+  padding-left:10px;
+  font-size:15px;
+  box-shadow:0px 2px 4px #000; 
+}
+
+  .right-middle-section>div,
+  .middle-middle-section>div{
+    width:100%;
+    border-bottom-right-radius:10px;
+    border-bottom-left-radius:10px;
+    background-color:var(--main-color);
+    box-shadow:0px 2px 4px #000;
+    padding:20px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:5px;  
+  }
+
+.college-total,
+.events-total{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100px;
+  height:100px;
+  background-color:rgb(28, 28, 28);
+  border-radius:50%;
+  margin:auto;
+  box-shadow: 4px 0px 5px 0px rgb(156, 0, 156),
+    0px 4px 5px 0px rgb(27, 196, 27),
+    -4px 0px 5px 0px rgb(224, 36, 36),
+    0px -4px 5px 0px rgb(184, 123, 9);
+}
+
+.total-num{
+  display:block;
+  font-size:25px;
+  font-weight:bold;
+}
+
+.small-circle{
+  width:80px;
+  height:80px;
+  background-color: rgb(46, 46, 46);
+  border-radius: 50%;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+}
+
+.events-total>div>p,
+.college-total>div>p{
+  text-align: center;
+  font-size: 10px;
+}
+
+.pragraphs p{
+  margin-top:10px;
+  margin-bottom:10px;
+  text-transform:capitalize;
+  
+}
+
+/*the rest of styles is in style2.css file*/
